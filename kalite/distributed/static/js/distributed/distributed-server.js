@@ -330,3 +330,35 @@ $(function() {
     });
 
 });
+
+
+$(function() {
+
+    var navbar_dynamic = $('#navbar-dynamic');
+    var navbar_toggle = $('.navbar-toggle');
+
+    // navbar_dynamic.removeClass('collapsed'); // set standard view
+    if (navbar_dynamic.innerHeight() > 50) {// check if we've got 2 lines
+        navbar_dynamic.addClass('navbar-dynamic-collapsed'); // force collapse mode
+    }
+
+});
+
+// $(function() {
+
+//     var width_full = $('.navbar-collapse').innerWidth();
+//     var width_left = $('.navbar-nav').outerWidth(true);
+//     var width_right = $('.navbar-right').outerWidth(true);
+    
+//     var navbar_dynamic = $('#navbar-dynamic');
+//     var navbar_toggle = $('.navbar-toggle');
+//     // var navbar = $('.navbar');
+    
+//     if (width_full - (width_left + width_right) < 0)
+//     {
+//         navbar_toggle.css('display', 'inline');
+//         navbar_dynamic.css('display', 'block');
+//         // navbar_dynamic.addClass('navbar-dynamic-collapsed');
+//     }
+
+// });

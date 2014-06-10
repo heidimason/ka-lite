@@ -61,6 +61,11 @@ table {
 .navbar-right {
     display: none;
 }
+/* Test */
+#navbar-dynamic-collapsed {
+    background-color: red !important;
+}
+/* End of test */
 .glyphicon-search:hover, .glyphicon-search:focus {
     cursor: pointer;
 }
