@@ -330,3 +330,9 @@ $(function() {
     });
 
 });
+
+
+$(function() {
+    var is_touch_device = 'ontouchstart' in document.documentElement;
+    $('body').toggleClass('touchscreen', is_touch_device);
+});

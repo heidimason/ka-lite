@@ -24,6 +24,10 @@ REQUIRED STYLES (be careful overriding)
   /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
 }
 
+    .touchscreen .video-js { /* KA-LITE-MOD */
+      font-size: 20px;
+    }
+
 /* Playback technology elements expand to the width/height of the containing div. <video> or <object> */
 .video-js .vjs-tech { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -125,6 +129,10 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   height: 2.6em; width: 2.6em;
 }
 
+    .touchscreen .vjs-default-skin .vjs-control { /* KA-LITE-MOD */
+      padding: 0 0.5em;
+    }
+
 .vjs-default-skin .vjs-control:focus {
   outline: 0;
 /*  background-color: #555;*/
@@ -141,6 +149,11 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 .vjs-default-skin.vjs-paused .vjs-play-control div { width: 15px; height: 17px; background: url('video-js.png'); margin: 0.5em auto 0; }
 .vjs-default-skin.vjs-playing .vjs-play-control div { width: 15px; height: 17px; background: url('video-js.png') -25px 0; margin: 0.5em auto 0; }
 
+    .touchscreen .vjs-default-skin.vjs-paused .vjs-play-control div, /* KA-LITE-MOD */
+    .touchscreen .vjs-default-skin.vjs-playing .vjs-play-control div {
+      margin-top: 0.9em;
+    }
+
 /* Rewind
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
@@ -150,6 +163,9 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-mute-control { width: 3.8em; cursor: pointer !important; float: right; }
 .vjs-default-skin .vjs-mute-control div { width: 22px; height: 16px; background: url('video-js.png') -75px -25px; margin: 0.5em auto 0; }
+    .touchscreen .vjs-default-skin .vjs-mute-control div { /* KA-LITE-MOD */
+      margin-top: 0.9em;
+    }
 .vjs-default-skin .vjs-mute-control.vjs-vol-0 div { background: url('video-js.png') 0 -25px; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-1 div { background: url('video-js.png') -25px -25px; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-2 div { background: url('video-js.png') -50px -25px; }
@@ -281,6 +297,11 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   /* CSS Shadows */
   -webkit-box-shadow: 0 2px 4px 0 #000; -moz-box-shadow: 0 2px 4px 0 #000; box-shadow: 0 2px 4px 0 #000;
 }
+
+    .touchscreen .vjs-default-skin div.vjs-seek-handle { /* KA-LITE-MOD */
+      margin-top: 0.08em;
+    }
+
 /* Time Display
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-time-controls {
@@ -322,6 +343,9 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 
 .vjs-default-skin .vjs-fullscreen-control { width: 3.8em; cursor: pointer !important; float: right; }
 .vjs-default-skin .vjs-fullscreen-control div { width: 16px; height: 16px; background: url('video-js.png') -50px 0; margin: 0.5em auto 0; }
+    .touchscreen .vjs-default-skin .vjs-fullscreen-control div { /* KA-LITE-MOD */
+      margin-top: 0.9em;
+    }
 
 .vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control div { background: url('video-js.png') -75px 0; }
 
@@ -346,6 +370,10 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   /* CSS Shadows */
   -webkit-box-shadow: 4px 4px 8px #000; -moz-box-shadow: 4px 4px 8px #000; box-shadow: 4px 4px 8px #000;
 }
+
+    .touchscreen .vjs-default-skin .vjs-big-play-button { /* KA-LITE-MOD */
+      top: 40%; left: 45%;
+    }
 
 .vjs-default-skin div.vjs-big-play-button:hover {
   -webkit-box-shadow: 0 0 80px #fff; -moz-box-shadow: 0 0 80px #fff; box-shadow: 0 0 80px #fff;
@@ -452,8 +480,16 @@ div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; to
   background: -ms-linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
   background: linear-gradient(top,  #4d4d4d 0%,#3f3f3f 50%,#333333 50%,#252525 100%);
 }
+
+    .touchscreen .vjs-default-skin .vjs-menu-button { /* KA-LITE-MOD */
+      margin-right: 0.9em;
+    }
+
 /* Button Icon */
 .vjs-default-skin .vjs-menu-button div { background: url('video-js.png') 0px -75px no-repeat; width: 16px; height: 16px; margin: 0.2em auto 0; padding: 0; }
+    .touchscreen .vjs-default-skin .vjs-menu-button div { /* KA-LITE-MOD */
+          margin-top: 0.5em;
+        }
 
 /* Button Pop-up Menu */
 .vjs-default-skin .vjs-menu-button ul {
@@ -473,6 +509,9 @@ div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; to
 .vjs-default-skin .vjs-menu-button:hover ul { display: block; list-style: none; }
 .vjs-default-skin .vjs-menu-button ul li { list-style: none; margin: 0; padding: 0.3em 0 0.3em 20px; line-height: 1.4em; font-size: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left; }
 .vjs-default-skin .vjs-menu-button ul li.vjs-selected { text-decoration: underline; background: url('video-js.png') -125px -50px no-repeat; }
+    .touchscreen .vjs-default-skin .vjs-menu-button ul li.vjs-selected { /* KA-LITE-MOD */
+          list-style: circle;
+        }
 .vjs-default-skin .vjs-menu-button ul li:focus,
 .vjs-default-skin .vjs-menu-button ul li:hover,
 .vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
@@ -495,5 +534,8 @@ div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; to
 
 /* Subtitles Button */
 .vjs-default-skin .vjs-captions-button div { background-position: -25px -75px; }
+    .touchscreen .vjs-default-skin .vjs-captions-button div { /* KA-LITE-MOD */
+          margin-top: 0.6em;
+        }
 .vjs-default-skin .vjs-chapters-button div { background-position: -100px -75px; }
 .vjs-default-skin .vjs-chapters-button ul { width: 20em; left: -8.5em; /* Width of menu - width of button / 2 */ }
